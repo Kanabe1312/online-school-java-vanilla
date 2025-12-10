@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
         View viewPersoana = new View();
         viewPersoana.play();
-        System.out.println("test");
+
 
     }
 }

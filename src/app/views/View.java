@@ -38,7 +38,7 @@ public class View {
         System.out.println("5-Add schedule");
         System.out.println("6-Show my enrolments");
         System.out.println("7-Add enrolment");
-        System.out.println("asdasdas");
+
 
 
     }
