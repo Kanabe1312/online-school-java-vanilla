@@ -38,7 +38,7 @@ public class View {
         System.out.println("5-Add schedule");
         System.out.println("6-Show my enrolments");
         System.out.println("7-Add enrolment");
-
+        System.out.println("8-Remove enrolment");
 
 
     }
@@ -70,6 +70,7 @@ public class View {
                 break;
                 case 7 : enrollStudentToCourse();
                 break;
+                case 8: removeEnrolmentFromCourse();
 
             }
         }
@@ -205,6 +206,17 @@ public class View {
         System.out.println("Enter course ID to enrol:");
         int courseId = Integer.parseInt(sc.nextLine());
         this.enrolmentService.enrolStudentToCourse(logat.id,courseId);
+    }
+
+    public void removeEnrolmentFromCourse(){
+        if(logat == null){
+            System.out.println("Please Login!");
+            return;
+        }
+        System.out.println("Enter course ID to remove:");
+        int courseId = Integer.parseInt(sc.nextLine());
+
+        enrolmentService.removeEnrolment(logat.id,courseId);
     }
 
 

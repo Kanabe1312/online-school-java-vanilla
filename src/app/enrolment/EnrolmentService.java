@@ -84,4 +84,17 @@ public class EnrolmentService {
 
         System.out.println("Student" + studentId + "was enrolled at the course " + couseId);
     }
+    public void removeEnrolment(int studentId, int couseId){
+        for(int i = 0;i<enrolments.size();i++){
+            Enrolment e = enrolments.get(i);
+
+            if(e.studentId == studentId &&  e.couseId == couseId){
+                enrolments.remove(i);
+                System.out.println("Student" + studentId + "was removed from the course " + couseId);
+                return;
+            }
+        }
+        System.out.println("Student not found,enrolled in this course " + couseId);
+    }
+
 }
